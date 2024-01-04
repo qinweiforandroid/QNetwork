@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.qw.network.env'
+    namespace 'com.qw.network.retorfit'
     compileSdk 34
 
     defaultConfig {
@@ -30,7 +30,11 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.9.0'
+    //https://square.github.io/okhttp/
+    api "com.squareup.okhttp3:okhttp:$versions.okhttp"
+    //https://square.github.io/retrofit/
+    api "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$versions.converter_gson"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
